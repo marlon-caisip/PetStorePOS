@@ -6,7 +6,7 @@ This project is a Point of Sales System Project for Pet Products and Items. It i
 
 - Sorting Function: https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular
 
-## Development server
+## How to use this project?
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
