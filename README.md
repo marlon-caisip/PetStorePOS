@@ -22,8 +22,6 @@ If Angular CLI is not installed, you can install it globally using npm:
 npm install -g @angular/cli
 ```
 
-
-
 ## Installation
 
 1. Clone the repository:
