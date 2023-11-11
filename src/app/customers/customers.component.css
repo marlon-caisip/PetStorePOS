@@ -1,0 +1,123 @@
+.orders {
+  background-color: #ffffff;
+  margin-left: 15rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border-radius: 3vh;
+  scroll-behavior: smooth;
+}
+
+/* .fluid-container styles found in customers.component.ts */
+
+.orderContainer {
+  width: 21rem;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #eeeeee;
+  background-color: #f1f1f1;
+  padding: 25px;
+  border-radius: 3vh;
+  text-wrap: nowrap;
+  list-style: none;
+}
+
+.customOrder, .sortBtn {
+  
+}
+
+h2,
+td,
+.customerName {
+  color: #2b2b2b;
+}
+
+th {
+  color: #929292;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+td {
+  font-weight: 300;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.items {
+  list-style: none;
+}
+
+th,
+td {
+  padding: 7px;
+}
+
+.customerName {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.orNum {
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  color: #424242 !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  background-color: #d2d2d2;
+  padding: 2px 5px;
+}
+
+.DaT {
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.total {
+  font-weight: 400;
+  color: #4f4f4f;
+}
+
+.tableValues {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 6px;
+}
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.sortBtn {
+  font-size: 14px;
+  font-weight: 300;
+  color: #424242;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  padding: 8px 23px;
+}
+
+.sortBtn:disabled {
+  background-color: #dfdfdf;
+  color: #343434;
+  border: 1px solid #d6d6d6;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .fluid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 499px) {
+  .fluid-container {
+    grid-template-columns: 1fr;
+  }
+}

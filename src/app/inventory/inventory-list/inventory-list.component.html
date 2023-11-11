@@ -1,0 +1,19 @@
+<!-- angular v. 17 latest way of looping list, using @for blocks -->
+
+<div class="container">
+  @for (product of inventoryRecords; track $index) {
+  <b>{{ product.name }}</b>
+  <p>Brand: {{ product.brand }}</p>
+  <p>Weight: {{ product.weight }}</p>
+  <p>Type: {{ product.type }}</p>
+  <p>Price: ${{ product.price.toFixed(2) }}</p>
+  <ul>
+    <!-- angular v. 16 way of looping list, using ngFor -->
+    <li *ngFor="let historyItem of product.history">
+      Date: {{ historyItem.date | date }}, Quantity:
+      {{ historyItem.quantity }}
+    </li>
+  </ul>
+  <hr />
+  }
+</div>

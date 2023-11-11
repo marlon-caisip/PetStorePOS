@@ -1,0 +1,41 @@
+
+.nav {
+  background-color: rgb(227, 234, 240);
+  margin: -.5rem -.5rem;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 5px;
+  width: 12rem;
+  padding-bottom: 100%;
+  padding-top: 100;
+  position: fixed;
+  overflow: auto;
+}
+a,
+#siteTitleObject {
+  text-decoration: none !important;
+  text-wrap: nowrap;
+}
+
+img {
+  width: 10%;
+  height: 10%;
+  object-fit: cover;
+}
+
+#siteTitleObject {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: center;
+}
