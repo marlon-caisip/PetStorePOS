@@ -6,12 +6,6 @@ This project is a Point of Sales System Project for Pet Products and Items. It i
 
 - Sorting Function: https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular
 
-## How to use this project?
-
-# Your Angular Project Name
-
-This project is a [brief project description]. It is built using Angular and requires npm and Node.js for installation.
-
 ## Project Dependencies
 
 Make sure you have the following prerequisites installed on your machine:
