@@ -2,7 +2,7 @@
 
 This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation, inventory management, and sales history information.
 
-#Project 
+# Project  
 
 ## Development server
 
