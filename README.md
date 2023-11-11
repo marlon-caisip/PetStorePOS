@@ -2,7 +2,7 @@
 
 This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation, inventory management, and sales history information.
 
-## Project Reference 
+## Project Reference
 
 - Sorting Function: https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular
 
@@ -23,21 +23,21 @@ Make sure you have the following prerequisites installed on your machine:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/your-username/your-angular-project.git
-    ```
+   ```bash
+   git clone https://github.com/your-username/your-angular-project.git
+   ```
 
 2. Navigate to the project directory:
 
-    ```bash
-    cd your-angular-project
-    ```
+   ```bash
+   cd your-angular-project
+   ```
 
 3. Install project dependencies using npm:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ## How to Use
 
