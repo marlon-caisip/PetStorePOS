@@ -14,6 +14,8 @@ export class InventoryListComponent {
 
   inventoryRecords: any[]; // This should contain your actual inventory records.
 
+  // comment test
+
   constructor() {
     // Simulated past days' inventory records
     this.inventoryRecords = [
