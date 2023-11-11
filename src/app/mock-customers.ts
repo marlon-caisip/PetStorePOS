@@ -394,6 +394,45 @@ export const CUSTOMERS: Customer[] = [
     },
     total: 0,
   },
+  {
+    id: 12,
+    name: "New Person II",
+    orderNumber: 1077,
+    dateAndTime: new Date("October 5, 2023 09:00:00"),
+    items: {
+      item1: {
+        name: "Cat Food",
+        brand: "Hill's Science Diet",
+        weight: "5kg",
+        type: "Dry Food",
+        price: 25.00,
+        quantity: 3,
+      },
+      item2: {
+        name: "Cat Litter",
+        brand: "Arm & Hammer",
+        type: "Clumping",
+        price: 10.00,
+        quantity: 3,
+      },
+      item3: {
+        name: "Cat Toys",
+        brand: "SmartyKat",
+        type: "Feather Whirl",
+        price: 8.00,
+        quantity: 3,
+      },
+      item4: {
+        name: "Cat Bed",
+        brand: "Frisco",
+        type: "Round",
+        price: 15.00,
+        quantity: 3,
+      },
+      vouchers: 0,
+    },
+    total: 0,
+  },
   
 
 
