@@ -13,7 +13,7 @@ Make sure you have the following prerequisites installed on your machine:
 - [Node.js](https://nodejs.org/en/) (includes npm)
 - [Angular CLI](https://cli.angular.io/)
 
-If Node.js and npm are not installed on your machine, you can download and install them from [https://nodejs.org/en/](https://nodejs.org/en/).
+If Node.js and npm are not installed on your machine, you can download and install them from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
 
 If Angular CLI is not installed, you can install it globally using npm:
 
