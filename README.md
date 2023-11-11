@@ -29,10 +29,7 @@ npm install -g @angular/cli
    git clone https://github.com/marlon-caisip/PetStorePOS.git
    ```
 
-   or
-
-   ```bash
-   ```
+   or download the 
 
 2. Navigate to the project directory:
 
