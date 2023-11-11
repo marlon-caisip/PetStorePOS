@@ -318,7 +318,7 @@ export const CUSTOMERS: Customer[] = [
 
   {
     id: 12,
-    name: "Marloni",
+    name: "Marloninono",
     orderNumber: 1077,
     dateAndTime: new Date("October 5, 2023 09:00:00"),
     items: {
@@ -360,4 +360,12 @@ export const CUSTOMERS: Customer[] = [
 
 ];
 
-export default CUSTOMERS;
+export default CUSTOMERS;    
+
+
+
+
+
+
+
+
