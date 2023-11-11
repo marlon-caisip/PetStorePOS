@@ -1,6 +1,6 @@
 # PetStorePOS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version.
+This project is a Point of Sales System Project
 
 ## Development server
 
