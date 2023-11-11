@@ -1,6 +1,6 @@
 ## PetStorePOS
 
-This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation, inventory management, and sales history information. I used Angular as its framework, you can visit [Angular.dev](https://angular.dev) for more documentation about t.
+This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation, inventory management, and sales history information. I used Angular as its framework, you can visit [Angular.dev](https://angular.dev) to learn more.
 
 ## Project Reference
 
