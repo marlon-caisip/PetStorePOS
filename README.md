@@ -2,6 +2,8 @@
 
 This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation, inventory management, and sales history information.
 
+#Project 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
