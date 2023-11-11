@@ -1,6 +1,6 @@
 # PetStorePOS
 
-This project is a Point of Sales System Project for Pet Products and Items.
+This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation of the product and 
 
 ## Development server
 
