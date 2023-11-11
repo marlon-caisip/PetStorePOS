@@ -1,8 +1,8 @@
-# PetStorePOS
+## PetStorePOS
 
 This project is a Point of Sales System Project for Pet Products and Items. It includes analyzation, inventory management, and sales history information.
 
-# Project 
+## Project 
 
 - Sorting Function : "https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular" 
 
