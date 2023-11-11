@@ -4,7 +4,7 @@ This project is a Point of Sales System Project for Pet Products and Items. It i
 
 ## Project Reference 
 
-- Sorting Function : https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular
+- Sorting Function: https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular
 
 ## Development server
 
