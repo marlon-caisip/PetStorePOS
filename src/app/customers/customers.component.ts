@@ -117,6 +117,8 @@ export class CustomersComponent {
     return total;
   }
 
-  const newCustomer: CUSTOMER
+  const newCustomer: CUSTOMER = {
+    
+  }
 
 }
