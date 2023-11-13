@@ -117,6 +117,6 @@ export class CustomersComponent {
     return total;
   }
 
-  const 
+  const new
 
 }
