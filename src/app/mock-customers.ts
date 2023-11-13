@@ -1,6 +1,3 @@
-// refer to "https://angular.io/tutorial/tour-of-heroes/toh-pt2" for more information about displaying list 
-
-
 import { Customer } from './customer';
 
 export const CUSTOMERS: Customer[] = [
