@@ -10,7 +10,7 @@ import { Customer } from '../customer';
   styleUrl: './customers.component.css',
 })
 export class CustomersComponent {
-  customers[] = CUSTOMERS;
+  customers[] = CUSTOMERS[];
   containerStyle: { [key: string]: string } = {};
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
