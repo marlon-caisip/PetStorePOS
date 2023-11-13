@@ -117,22 +117,4 @@ export class CustomersComponent {
     return total;
   }
 
-  const newCustomer: Customer = {
-  id: this.customers.length + 1, // Generate a unique ID
-  name: "John Doe",
-  orderNumber: 1023,
-  dateAndTime: new Date(),
-  items: {
-    item1: {
-      // Fill item details if applicable
-    },
-    // Add more item objects if applicable
-    vouchers: 0,
-  },
-  total: 0,
-};
-
-this.customers.push(newCustomer);
-
-
 }
