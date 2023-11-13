@@ -117,7 +117,7 @@ export class CustomersComponent {
     return total;
   }
 
-  const newCustomer: Customer = {
+  const newCustomer: Customer[] = {
     id: this.customers.length + 1, // Generate a unique ID
     name: "John Doe",
     orderNumber: 1023,
