@@ -51,6 +51,8 @@ export interface Customer {
       };
       vouchers?: number; // An optional property for vouchers
     };
-    pet
+    pet?: {
+      
+    }
     total: number;
   }
