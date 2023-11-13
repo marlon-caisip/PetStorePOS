@@ -53,7 +53,8 @@ export interface Customer {
     };
     pet?: {
       petType: string;
-      petBreed
+      petBreed: string;
+      
     }
     total: number;
   }
