@@ -118,71 +118,7 @@ export class CustomersComponent {
   }
 
   const newCustomer: Customer = {
-    id: 0,
-    name: '',
-    orderNumber: '',
-    dateAndTime: '',
-    items: {
-      item1: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item2: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item3: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item4: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item5: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      vouchers: 0
-    }
-  };
-    id: 0,
-    name: '',
-    orderNumber: '',
-    dateAndTime: '',
-    items: {
-      item1: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item2: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item3: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item4: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      item5: {
-        name: '',
-        price: 0,
-        quantity: 0
-      },
-      vouchers: 0
-    }
-  };
+    
+  }
 
 }
