@@ -124,7 +124,12 @@ export class CustomersComponent {
     dateAndTime: new Date(),
     items: {
       item1: {
-        // Fill item details if applicable
+        name: "Cat Food",
+        brand: "Whiskas",
+        weight: "3kg",
+        type: "Dry Food",
+        price: 20.00,
+        quantity: 2,
       },
       // Add more item objects if applicable
       vouchers: 0,
