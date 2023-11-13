@@ -15,6 +15,13 @@ export class InventoryComponent {
   // calculate all the total products to order for the upcoming week (batch order) - dynamic (pure computation)
   // analyze the highest week of sales and conclude it as the most visited week of the month - dyanamic (pure computation)
 
+  Total sales per Day, Week and month.
+2. Total amount of pet food to order for the upcoming week.
+3. Inventory movement
+4. Determine which day of the week had the most number of people visiting the
+store
+
+
   // import child component Inventory List, and use it to display for the chart
 
   chartOptions = {
