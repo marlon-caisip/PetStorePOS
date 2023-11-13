@@ -120,23 +120,3 @@ export class CustomersComponent {
 
 
 }
-  const newCustomer: Customer = {
-    {
-      id: 1,
-      name: "John Pakistani",
-      orderNumber: 1021,
-      dateAndTime: new Date ("October 1, 2023 09:00:00"),
-      items: {
-        item1: {
-          name: "Cat Food",
-          brand: "Whiskas",
-          weight: "3kg",
-          type: "Dry Food",
-          price: 20.00,
-          quantity: 2,
-        },
-        vouchers: 0,
-      },
-      total: 0,
-    },
-  }
