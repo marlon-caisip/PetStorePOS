@@ -118,7 +118,27 @@ export class CustomersComponent {
   }
 
   const newCustomer: Customer = {
-    
+    id: 0,
+    name: '',
+    orderNumber: 0,
+    dateAndTime: undefined,
+    items: {
+      item1: {
+        name: '',
+        brand: '',
+        weight: undefined,
+        type: undefined,
+        color: undefined,
+        price: 0,
+        quantity: 0
+      },
+      item2: undefined,
+      item3: undefined,
+      item4: undefined,
+      item5: undefined,
+      vouchers: undefined
+    },
+    total: 0
   }
 
 }
