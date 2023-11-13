@@ -137,6 +137,6 @@ export class CustomersComponent {
     total: 0,
   };
   
-  Customer.push(newCustomer);
+  CUSTOMER.push(newCustomer);
   
 }
