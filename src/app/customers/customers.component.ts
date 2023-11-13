@@ -117,4 +117,6 @@ export class CustomersComponent {
     return total;
   }
 
+  const 
+
 }
