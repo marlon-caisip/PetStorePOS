@@ -137,26 +137,6 @@ export class CustomersComponent {
     total: 0,
   };
   
-  const newCustomer: Customer = {
-    id: this.customers.length + 1, // Generate a unique ID
-    name: "John Doe",
-    orderNumber: 1023,
-    dateAndTime: new Date(),
-    items: {
-      item1: {
-        name: "Cat Food",
-        brand: "Whiskas",
-        weight: "3kg",
-        type: "Dry Food",
-        price: 20.00,
-        quantity: 2,
-      },
-      // Add more item objects if applicable
-      vouchers: 0,
-    },
-    total: 0,
-  };
-
   this.customers.push(newCustomer);
   
 }
