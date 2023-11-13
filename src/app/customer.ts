@@ -52,7 +52,7 @@ export interface Customer {
       vouchers?: number; // An optional property for vouchers
     };
     pet?: {
-      petName
+      petName: string;
     }
     total: number;
   }
