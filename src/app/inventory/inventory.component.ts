@@ -16,7 +16,7 @@ export class InventoryComponent {
   // analyze the highest week of sales and conclude it as the most visited week of the month - dyanamic (pure computation)
 
 // 1.  Total sales per Day, Week and month. - check
-// 2. Total amount of pet food to order for the upcoming week.
+// 2. Total amount of PET FOOD TO ORDER for the upcoming week.
 // 3. Inventory movement
 // 4. Determine which day of the week had the most number of people visiting the
 // store
