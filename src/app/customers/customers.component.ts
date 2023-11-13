@@ -117,7 +117,7 @@ export class CustomersComponent {
     return total;
   }
 
-  newCustomer: Customer = {
+  newCustomer: customers = {
     
   }
 
