@@ -6,6 +6,7 @@ This project is a Point of Sales System Project for Pet Products and Items. It i
 
 - Sorting Function: https://www.telerik.com/blogs/sorting-filtering-grouping-aggregating-data-angular
 - Chart: https://canvasjs.com/angular-charts/
+- // refer to "https://angular.io/tutorial/tour-of-heroes/toh-pt2" for more information about displaying list 
 
 ## Project Dependencies
 
