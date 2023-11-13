@@ -53,7 +53,7 @@ export interface Customer {
     };
     pet?: {
       petName: string;
-      
+      pet
     }
     total: number;
   }
