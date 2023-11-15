@@ -1,19 +1,37 @@
-<!-- angular v. 17 latest way of looping list, using @for blocks -->
+<!-- It loops on the inventories -->
+<!-- ngIf for dynamic tags, show if there's value and vice versa -->
 
 <div class="container">
-  @for (product of inventoryRecords; track $index) {
-  <b>{{ product.name }}</b>
-  <p>Brand: {{ product.brand }}</p>
-  <p>Weight: {{ product.weight }}</p>
-  <p>Type: {{ product.type }}</p>
-  <p>Price: ${{ product.price.toFixed(2) }}</p>
-  <ul>
-    <!-- angular v. 16 way of looping list, using ngFor -->
-    <li *ngFor="let historyItem of product.history">
-      Date: {{ historyItem.date | date }}, Quantity:
-      {{ historyItem.quantity }}
-    </li>
-  </ul>
-  <hr />
-  }
+  <table black>
+    <tr>
+      <th>Name</th>
+      <th class="center">Brand</th>
+      <th>Weight</th>
+      <th>Age</th>
+      <th>Color</th>
+      <th>Owner</th>
+      <th class="center">Type</th>
+      <th class="center">Price</th>
+      <th class="center">History</th>
+    </tr>
+    @for (item of inventories; track $index) {}
+    <tr *ngFor="let item of inventories">
+      <td>{{ item.name }}</td>
+      <td class="center">{{ item.brand }}</td>
+      <td class="center">{{ item.weight }}</td>
+      <td class="center">{{ item.age }}</td>
+      <td class="center">{{ item.color }}</td>
+      <td class="center">{{ item.owner }}</td>
+      <td class="center">{{ item.type }}</td>
+      <td class="center">{{ item.price }}</td>
+      <td>
+        <div>
+          <p *ngFor="let historyItem of item.history">
+            Date: {{ historyItem.date | date }}, Quantity:
+            {{ historyItem.quantity }}
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>

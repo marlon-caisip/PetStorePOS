@@ -3,17 +3,61 @@
 import { Component, Input, OnInit, ElementRef, Renderer2, HostListener } from '@angular/core';
 import { CUSTOMERS } from '../mock-customers';
 import { Customer } from '../customer';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { OrderFormComponent } from './order-form/order-form.component';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-customers',
+  standalone: true,
+  imports: [CommonModule, MatDialogModule, FormsModule],
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.css',
 })
 export class CustomersComponent {
   customers = CUSTOMERS;
+
+  newCustomer: Customer = {
+    id: 0,
+    name: '',
+    orderNumber: 0,
+    dateAndTime: new Date(),
+    items: {
+      item1: { name: '', brand: '', price: 0, quantity: 0 },
+      item2: { name: '', brand: '', price: 0, quantity: 0 },
+      item3: { name: '', brand: '', price: 0, quantity: 0 },
+      item4: { name: '', brand: '', price: 0, quantity: 0 },
+      item5: { name: '', brand: '', price: 0, quantity: 0 },
+    },
+    total: 0
+  };
+
+  addOrder() {
+    // Add validation logic if needed
+    this.customers.push(this.newCustomer);
+    // Reset the form or initialize a new customer for the next entry
+    this.newCustomer = {
+      id: 0,
+      name: '',
+      orderNumber: 0,
+      dateAndTime: new Date(),
+      items: {
+        item1: { name: '', brand: '', price: 0, quantity: 0 },
+        item2: { name: '', brand: '', price: 0, quantity: 0 },
+        item3: { name: '', brand: '', price: 0, quantity: 0 },
+        item4: { name: '', brand: '', price: 0, quantity: 0 },
+        item5: { name: '', brand: '', price: 0, quantity: 0 },
+      },
+      total: 0
+    };
+  }
+
+
   containerStyle: { [key: string]: string } = {};
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  constructor(private elementRef: ElementRef, private renderer: Renderer2, public dialog: MatDialog) {}
 
   ngOnInit() {
     this.calculateGridColumns();
@@ -115,6 +159,11 @@ export class CustomersComponent {
     }
   
     return total;
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(OrderFormComponent);
+    dialogRef;
   }
 
 }

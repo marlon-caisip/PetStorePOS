@@ -1,0 +1,57 @@
+<!-- The user can just skip some fields since the thing to be added can be pet or an -->
+
+<div class="container">
+  <h2 mat-dialogue-title>Add Order</h2>
+  <mat-dialog-content class="mat-typography">
+    <span>Customer Name: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newCustomer.name"
+      required
+    />
+    <br />
+
+    <!-- content for drop down -->
+
+    <mat-form-field>
+      <mat-label>Select Item</mat-label>
+      <mat-select [formControl]="itemControl" required>
+        @for (food of inventories; track food) {
+        <mat-option [value]="food.name">{{ food.name }}</mat-option>
+        }
+      </mat-select>
+      @if (itemControl.hasError('required')) {
+      <mat-error>Please choose an animal</mat-error>
+      }
+    </mat-form-field>
+
+    <!-- content for drop down -->
+
+    <!-- create a button that will optionally create a select item and quantity when clicked -->
+
+    <br />
+
+    <span>Quantity: </span>
+    <input
+      type="number"
+      name="Quantity"
+      id="Quantity"
+      [(ngModel)]="newCustomer.items"
+      required
+    />
+    <br />
+
+    @for (inventory of inventories; track $index) {
+    <span>Price: {{ calculateTotal(inventory) }}</span>
+    }
+
+    <!-- create the calculateTotal function -->
+
+    <!-- function to compute -->
+
+    <button (click)="cancelDialog()">Cancel</button>
+    <button type="submit" (click)="submitForm()">Submit</button>
+  </mat-dialog-content>
+</div>

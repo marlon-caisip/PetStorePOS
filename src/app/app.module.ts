@@ -9,22 +9,27 @@ import { TotalSalesComponent } from './total-sales/total-sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { AnalysisComponent } from './analysis/analysis.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
-
+// routing configuration
 const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: CustomersComponent },
   { path: 'total-sales', component: TotalSalesComponent },
   { path: 'inventory', component: InventoryComponent },
   { path: 'analysis', component: AnalysisComponent },
 ];
 
+// configuration for the standalone component and other modules
+
 @NgModule({
   declarations: [
     AppComponent,
     LeftNavigationComponent,
-    CustomersComponent,
     TotalSalesComponent,
-    
     AnalysisComponent
   ],
   imports: [
@@ -32,7 +37,13 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     CanvasJSAngularChartsModule,
-    InventoryComponent
+    InventoryComponent,
+    FormsModule,
+    BrowserAnimationsModule,
+    CustomersComponent,
+    ReactiveFormsModule, 
+    CommonModule
+    
   ],
   exports: [RouterModule],
   providers: [],

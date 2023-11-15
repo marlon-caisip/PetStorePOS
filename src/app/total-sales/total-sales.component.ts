@@ -75,9 +75,6 @@ export class TotalSalesComponent {
       return totalSales;
     }
   
-  
-
-
     chartOptionsWeekly = {
       title: {
         text: "October Weekly Sales"
@@ -142,11 +139,7 @@ export class TotalSalesComponent {
     
       return total;
     } 
-
-    
-
-
-    
+ 
     chartOptionsDaily = {
       title: {
         text: "Daily Sales"
@@ -192,7 +185,6 @@ export class TotalSalesComponent {
       }]
     }
   
-
     chartOptionsMonthlyy = {
       title: {
         text: "October Sales Data"
@@ -239,9 +231,7 @@ export class TotalSalesComponent {
           { label: "28", y: this.getTotalForMonth(28, 9) },
           { label: "29", y: this.getTotalForMonth(29, 9) },
           { label: "30", y: this.getTotalForMonth(30, 9) }
-        
-      ]
+        ]
       }]
     }
-
 }

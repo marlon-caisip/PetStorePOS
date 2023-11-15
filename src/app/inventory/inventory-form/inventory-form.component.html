@@ -1,0 +1,98 @@
+<!-- The user can just skip some fields since the thing to be added can be pet or an -->
+
+<div class="container">
+  <h2 mat-dialogue-title>Add to Inventory</h2>
+  <mat-dialog-content class="mat-typography">
+    <span>Name: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.name"
+      aria-required="true"
+    />
+    <br />
+    <span>Brand: </span>
+    <input
+      type="text"
+      name="ItemBrand"
+      id="ItemBrand"
+      [(ngModel)]="newInventory.brand"
+    />
+    <br />
+    <span>Breed: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.breed"
+    />
+    <br />
+    <span>Weight: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.weight"
+    />
+    <br />
+    <span>Type: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.type"
+    />
+    <br />
+    <span>Age: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.age"
+    />
+    <br />
+    <span>Color: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.color"
+    />
+    <br />
+    <span>Owner: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.owner"
+    />
+    <br />
+    <span>Price: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.price"
+    />
+    <br />
+    <span>Quantity </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.history[0].quantity"
+    />
+    <br />
+    <span>Date: </span>
+    <input
+      type="text"
+      name="ItemName"
+      id="ItemName"
+      [(ngModel)]="newInventory.history[0].date"
+    />
+    <br />
+    <button (click)="cancelDialog()">Cancel</button>
+    <button type="submit" (click)="submitForm()">Submit</button>
+  </mat-dialog-content>
+</div>

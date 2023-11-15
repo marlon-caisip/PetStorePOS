@@ -26,6 +26,8 @@
     </button>
   </div>
 
+  <button mat-button (click)="openDialog()">Create Order</button>
+
   <br />
 
   <div class="fluid-container" [ngStyle]="containerStyle">
@@ -165,3 +167,19 @@
   </div>
 </div>
 
+<!-- your-component.component.html -->
+<div>
+  <form (ngSubmit)="addOrder()">
+    <label for="customerName">Customer Name:</label>
+    <input
+      type="text"
+      id="customerName"
+      [(ngModel)]="newCustomer.name"
+      required
+    />
+
+    <!-- Add other input fields based on your Customer interface properties -->
+
+    <button type="submit">Add Customer</button>
+  </form>
+</div>

@@ -1,0 +1,6 @@
+.container {
+  height: fit-content;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 3vh;
+}
