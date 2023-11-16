@@ -19,41 +19,6 @@ import { CommonModule } from '@angular/common';
 export class CustomersComponent {
   customers = CUSTOMERS;
 
-  newCustomer: Customer = {
-    id: 0,
-    name: '',
-    orderNumber: 0,
-    dateAndTime: new Date(),
-    items: {
-      item1: { name: '', brand: '', price: 0, quantity: 0 },
-      item2: { name: '', brand: '', price: 0, quantity: 0 },
-      item3: { name: '', brand: '', price: 0, quantity: 0 },
-      item4: { name: '', brand: '', price: 0, quantity: 0 },
-      item5: { name: '', brand: '', price: 0, quantity: 0 },
-    },
-    total: 0
-  };
-
-  addOrder() {
-    // Add validation logic if needed
-    this.customers.push(this.newCustomer);
-    // Reset the form or initialize a new customer for the next entry
-    this.newCustomer = {
-      id: 0,
-      name: '',
-      orderNumber: 0,
-      dateAndTime: new Date(),
-      items: {
-        item1: { name: '', brand: '', price: 0, quantity: 0 },
-        item2: { name: '', brand: '', price: 0, quantity: 0 },
-        item3: { name: '', brand: '', price: 0, quantity: 0 },
-        item4: { name: '', brand: '', price: 0, quantity: 0 },
-        item5: { name: '', brand: '', price: 0, quantity: 0 },
-      },
-      total: 0
-    };
-  }
-
 
   containerStyle: { [key: string]: string } = {};
 
@@ -89,7 +54,7 @@ export class CustomersComponent {
 
   sortCustomersByDate() {
     this.customers.sort((a, b) => {
-      return <any>new Date(a.dateAndTime) - <any>new Date(b.dateAndTime);
+      return <any>new Date(b.dateAndTime) - <any>new Date(a.dateAndTime);
     });
   }
 
@@ -133,29 +98,29 @@ export class CustomersComponent {
   calculateTotal(customer: Customer): number {
     let total = 0;
   
-    if (customer.items.item1) {
+    if (customer.items?.item1) {
       total += customer.items.item1.price * customer.items.item1.quantity;
     }
   
-    if (customer.items.item2) {
+    if (customer.items?.item2) {
       total += customer.items.item2.price * customer.items.item2.quantity;
     }
   
-    if (customer.items.item3) {
+    if (customer.items?.item3) {
       total += customer.items.item3.price * customer.items.item3.quantity;
     }
   
-    if (customer.items.item4) {
+    if (customer.items?.item4) {
       total += customer.items.item4.price * customer.items.item4.quantity;
     }
   
-    if (customer.items.item5) {
+    if (customer.items?.item5) {
       total += customer.items.item5.price * customer.items.item5.quantity;
     }
-  
-    // Add voucher amount if available
-    if (customer.items.vouchers) {
-      total -= customer.items.vouchers;
+
+    // create function to comput total of pets
+    if (customer.pets) {
+      total += customer.pets.price * customer.pets.quantity;
     }
   
     return total;

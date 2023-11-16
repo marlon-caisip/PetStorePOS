@@ -23,3 +23,12 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <p><strong>Most Visited Week:</strong> Week {{ findHighestSalesWeek(9) }}</p>
+  <p>
+    <strong>Feed to order for the upcoming week:</strong>
+    <!-- set decimal to 2 -->
+    {{ findFeedToOrderForWeek(1, 9) | number: '1.2-2'}}% additional to stocks.
+  </p>
+</div>

@@ -24,9 +24,11 @@
     >
       Sort by Name
     </button>
-  </div>
 
-  <button mat-button (click)="openDialog()">Create Order</button>
+    <button mat-button (click)="openDialog()" id="createOrder">
+      Add Order
+    </button>
+  </div>
 
   <br />
 
@@ -45,114 +47,130 @@
         <table class="tableValues">
           <tr>
             <th>Items</th>
-            <th>Items</th>
             <th>Qty</th>
             <th>Price</th>
           </tr>
-          <tr>
+          <tr
+            *ngIf="
+              customer.items?.item1?.brand ||
+              customer.items?.item1?.name ||
+              customer.items?.item1?.weight ||
+              customer.items?.item1?.type
+            "
+          >
             <td>
               {{
-                (customer.items.item1.brand +
+                (customer.items?.item1?.brand +
                   " " +
-                  customer.items.item1.name +
+                  customer.items?.item1?.name +
                   " " +
-                  customer.items.item1.weight +
+                  customer.items?.item1?.weight +
                   " " +
-                  customer.items.item1.type | slice : 0 : 20) + "..."
+                  customer.items?.item1?.type | slice : 0 : 20) + "..."
               }}
               <!-- truncate text -->
             </td>
 
-            <td>{{ customer.items.item1.quantity }}</td>
-            <td>{{ customer.items.item1.price }}</td>
+            <td>{{ customer.items?.item1?.quantity }}</td>
+            <td>{{ customer.items?.item1?.price }}</td>
           </tr>
           <tr
             *ngIf="
-              customer.items.item2?.brand ||
-              customer.items.item2?.name ||
-              customer.items.item2?.weight ||
-              customer.items.item2?.type
+              customer.items?.item2?.brand ||
+              customer.items?.item2?.name ||
+              customer.items?.item2?.weight ||
+              customer.items?.item2?.type
             "
           >
             <td>
               {{
-                ((customer.items.item2?.brand || +"") +
+                ((customer.items?.item2?.brand || +"") +
                   " " +
-                  (customer.items.item2?.name || "") +
+                  (customer.items?.item2?.name || "") +
                   " " +
-                  (customer.items.item2?.weight || "") +
+                  (customer.items?.item2?.weight || "") +
                   " " +
-                  (customer.items.item2?.type || "") | slice : 0 : 20) + "..."
+                  (customer.items?.item2?.type || "") | slice : 0 : 20) + "..."
               }}
             </td>
-            <td>{{ customer.items.item2?.quantity }}</td>
-            <td>{{ customer.items.item2?.price }}</td>
+            <td>{{ customer.items?.item2?.quantity }}</td>
+            <td>{{ customer.items?.item2?.price }}</td>
           </tr>
           <tr
             *ngIf="
-              customer.items.item3?.brand ||
-              customer.items.item3?.name ||
-              customer.items.item3?.weight ||
-              customer.items.item3?.type
+              customer.items?.item3?.brand ||
+              customer.items?.item3?.name ||
+              customer.items?.item3?.weight ||
+              customer.items?.item3?.type
             "
           >
             <td>
               {{
-                (customer.items.item3?.brand +
+                (customer.items?.item3?.brand +
                   " " +
-                  customer.items.item3?.name +
+                  customer.items?.item3?.name +
                   " " +
-                  customer.items.item3?.weight +
+                  customer.items?.item3?.weight +
                   " " +
-                  customer.items.item3?.type | slice : 0 : 20) + "..."
+                  customer.items?.item3?.type | slice : 0 : 20) + "..."
               }}
             </td>
-            <td>{{ customer.items.item3?.quantity }}</td>
-            <td>{{ customer.items.item3?.price }}</td>
+            <td>{{ customer.items?.item3?.quantity }}</td>
+            <td>{{ customer.items?.item3?.price }}</td>
           </tr>
           <tr
             *ngIf="
-              customer.items.item4?.brand ||
-              customer.items.item4?.name ||
-              customer.items.item4?.weight ||
-              customer.items.item4?.type
+              customer.items?.item4?.brand ||
+              customer.items?.item4?.name ||
+              customer.items?.item4?.weight ||
+              customer.items?.item4?.type
             "
           >
             <td>
               {{
-                (customer.items.item4?.brand +
+                (customer.items?.item4?.brand +
                   " " +
-                  customer.items.item4?.name +
+                  customer.items?.item4?.name +
                   " " +
-                  customer.items.item4?.weight +
+                  customer.items?.item4?.weight +
                   " " +
-                  customer.items.item4?.type | slice : 0 : 20) + "..."
+                  customer.items?.item4?.type | slice : 0 : 20) + "..."
               }}
             </td>
-            <td>{{ customer.items.item4?.quantity }}</td>
-            <td>{{ customer.items.item4?.price }}</td>
+            <td>{{ customer.items?.item4?.quantity }}</td>
+            <td>{{ customer.items?.item4?.price }}</td>
           </tr>
           <tr
             *ngIf="
-              customer.items.item5?.brand ||
-              customer.items.item5?.name ||
-              customer.items.item5?.weight ||
-              customer.items.item5?.type
+              customer.items?.item5?.brand ||
+              customer.items?.item5?.name ||
+              customer.items?.item5?.weight ||
+              customer.items?.item5?.type
             "
           >
             <td>
               {{
-                (customer.items.item5?.brand +
+                (customer.items?.item5?.brand +
                   " " +
-                  customer.items.item5?.name +
+                  customer.items?.item5?.name +
                   " " +
-                  customer.items.item5?.weight +
+                  customer.items?.item5?.weight +
                   " " +
-                  customer.items.item5?.type | slice : 0 : 20) + "..."
+                  customer.items?.item5?.type | slice : 0 : 20) + "..."
               }}
             </td>
-            <td>{{ customer.items.item5?.quantity }}</td>
-            <td>{{ customer.items.item5?.price }}</td>
+            <td>{{ customer.items?.item5?.quantity }}</td>
+            <td>{{ customer.items?.item5?.price }}</td>
+          </tr>
+          <tr *ngIf="customer.pets">
+            <td>
+              {{
+                (customer.pets.petName + " " + customer.pets.petBreed
+                  | slice : 0 : 20) + "..."
+              }}
+            </td>
+            <td>{{ customer.pets.quantity }}</td>
+            <td>{{ customer.pets.price }}</td>
           </tr>
           <tr>
             <td class="total">Total</td>
@@ -165,21 +183,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<!-- your-component.component.html -->
-<div>
-  <form (ngSubmit)="addOrder()">
-    <label for="customerName">Customer Name:</label>
-    <input
-      type="text"
-      id="customerName"
-      [(ngModel)]="newCustomer.name"
-      required
-    />
-
-    <!-- Add other input fields based on your Customer interface properties -->
-
-    <button type="submit">Add Customer</button>
-  </form>
 </div>

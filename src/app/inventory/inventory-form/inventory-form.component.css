@@ -4,3 +4,62 @@
   padding: 2rem;
   border-radius: 3vh;
 }
+
+/* modify the input text design */
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  border-color: transparent;
+  font-family: Poppins;
+  font-size: medium;
+}
+
+/* turn the color to violet when selcted */
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="datetime-local"]:focus {
+  border: 2px solid #6137ad;
+  outline: none;
+}
+
+#cancel {
+  font-size: 14px;
+  font-weight: 300;
+  color: #424242;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  padding: 8px 23px;
+  cursor: pointer;
+  font-family: Poppins;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e2e2;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background-color: #6c4ba8;
+  padding: 8px 23px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: Poppins;
+}
+
+span {
+  font-family: Poppins;
+}
+
+h2 {
+  color: #424242;
+}

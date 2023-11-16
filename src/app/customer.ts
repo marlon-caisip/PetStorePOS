@@ -3,10 +3,10 @@ export interface Customer {
     name: string;
     orderNumber: number;
     dateAndTime: Date;
-    items: {
+    items?: {
       item1: {
         name: string;
-        brand: string;
+        brand?: string;
         weight?: string;
         type?: string;
         color?: string;
@@ -51,10 +51,13 @@ export interface Customer {
       };
       vouchers?: number; // An optional property for vouchers
     };
-    pet?: {
-      petType: string;
-      petBreed: string;
+    pets?: {
+      petName: string;
+      petType?: string;
+      petBreed?: string;
+      petOwner?: string;
       price: number;
-    }
+      quantity: number;
+    };
     total: number;
   }

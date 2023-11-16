@@ -1,7 +1,6 @@
-
 .nav {
-  background-color: rgb(227, 234, 240);
-  margin: -.5rem -.5rem;
+  background-color: #7851c0;
+  margin: -0.5rem -0.5rem;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
@@ -18,11 +17,15 @@ a,
 #siteTitleObject {
   text-decoration: none !important;
   text-wrap: nowrap;
+  color: aliceblue;
 }
 
+i {
+  color: aliceblue !important;
+}
 img {
-  width: 10%;
-  height: 10%;
+  width: 18%;
+  height: 18%;
   object-fit: cover;
 }
 
@@ -31,6 +34,7 @@ img {
   flex-direction: row;
   align-items: center;
   gap: 7px;
+  font-size: larger;
 }
 
 .nav-item {
@@ -38,4 +42,9 @@ img {
   flex-direction: row;
   gap: 7px;
   align-items: center;
+  color: antiquewhite;
+}
+
+#siteTitleObject {
+  margin-left: 1rem;
 }

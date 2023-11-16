@@ -11,32 +11,71 @@ import { CustomersComponent } from '../customers/customers.component';
 export class TotalSalesComponent {
   customers = CUSTOMERS;
 
+  constructor() {
+
+  }
+
+// Find the highest sales week dynamically
+findHighestSalesWeek(month: number): number {
+  const weeklySales: number[] = [0, 0, 0, 0, 0]; // Initialize weekly sales array
+  this.customers.forEach((customer) => {
+    const orderDate = customer.dateAndTime;
+    if (orderDate.getMonth() === month) {
+      const orderWeek = this.getWeekNumber(orderDate);
+      const total = this.calculateTotal(customer);
+      weeklySales[orderWeek - 1] += total; // Accumulate total sales for each week
+    }
+  });
+  // Find the week with the highest sales
+  const highestSales = Math.max(...weeklySales);
+  return weeklySales.indexOf(highestSales) + 1; // Adding 1 to get the actual week number
+}
+
+// analyze the upcoming feed amount to order for the upcoming week depending on the sales
+findFeedToOrderForWeek(weekNumber: number, month: number): number {
+  let totalSales = 0;
+  if (month >= 0 && month <= 11) {
+    for (const customer of this.customers) {
+      const orderDate = customer.dateAndTime;
+      const orderWeek = this.getWeekNumber(orderDate);
+
+      if (orderWeek === weekNumber && orderDate.getMonth() === month) {
+        // add all the week and divide it by 4
+        totalSales += this.calculateTotal(customer);
+        totalSales /= 31;
+      }
+    }
+  }
+  return totalSales;
+}
+
+
     calculateTotal(customer: Customer): number {
       let total = 0;
     
-      if (customer.items.item1) {
+      if (customer.items?.item1) {
         total += customer.items.item1.price * customer.items.item1.quantity;
       }
     
-      if (customer.items.item2) {
+      if (customer.items?.item2) {
         total += customer.items.item2.price * customer.items.item2.quantity;
       }
     
-      if (customer.items.item3) {
+      if (customer.items?.item3) {
         total += customer.items.item3.price * customer.items.item3.quantity;
       }
     
-      if (customer.items.item4) {
+      if (customer.items?.item4) {
         total += customer.items.item4.price * customer.items.item4.quantity;
       }
     
-      if (customer.items.item5) {
+      if (customer.items?.item5) {
         total += customer.items.item5.price * customer.items.item5.quantity;
       }
-    
-      // Add voucher amount if available
-      if (customer.items.vouchers) {
-        total -= customer.items.vouchers;
+
+      // create function to comput total of pets
+      if (customer.pets) {
+        total += customer.pets.price * customer.pets.quantity;
       }
     
       return total;
@@ -74,31 +113,7 @@ export class TotalSalesComponent {
   
       return totalSales;
     }
-  
-    chartOptionsWeekly = {
-      title: {
-        text: "October Weekly Sales"
-      },
-      theme: "light2",
-      animationEnabled: true,
-      exportEnabled: true,
-      axisY: {
-      includeZero: true,
-      valueFormatString: "₱#,##0"
-      },
-      data: [{
-      type: "column", //change type to bar, line, area, pie, etc
-      yValueFormatString: "₱#,##0",
-      color: "#01b8aa",
-      dataPoints: [
-        { label: "Week 1", y: this.getTotalForWeek(1, 9) }, // Assuming month = 9 (October)
-        { label: "Week 2", y: this.getTotalForWeek(2, 9) },
-        { label: "Week 3", y: this.getTotalForWeek(3, 9) },
-        { label: "Week 4", y: this.getTotalForWeek(4, 9) },
-        { label: "Week 1", y: this.getTotalForWeek(5, 9) }
-      ]
-      }]
-    }
+
 
     getTotalForMonth(day: number, month: number): number {
       let total = 0;
@@ -139,7 +154,34 @@ export class TotalSalesComponent {
     
       return total;
     } 
- 
+
+    // CHARTS
+     
+    chartOptionsWeekly = {
+      title: {
+        text: "October Weekly Sales"
+      },
+      theme: "light2",
+      animationEnabled: true,
+      exportEnabled: true,
+      axisY: {
+      includeZero: true,
+      valueFormatString: "₱#,##0"
+      },
+      data: [{
+      type: "column", //change type to bar, line, area, pie, etc
+      yValueFormatString: "₱#,##0",
+      color: "#01b8aa",
+      dataPoints: [
+        { label: "Week 1", y: this.getTotalForWeek(1, 9) }, // Assuming month = 9 (October)
+        { label: "Week 2", y: this.getTotalForWeek(2, 9) },
+        { label: "Week 3", y: this.getTotalForWeek(3, 9) },
+        { label: "Week 4", y: this.getTotalForWeek(4, 9) },
+        { label: "Week 5", y: this.getTotalForWeek(5, 9) }
+      ]
+      }]
+    }
+
     chartOptionsDaily = {
       title: {
         text: "Daily Sales"

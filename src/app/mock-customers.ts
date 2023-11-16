@@ -15,7 +15,7 @@ export const CUSTOMERS: Customer[] = [
         price: 20.00,
         quantity: 2,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -33,7 +33,7 @@ export const CUSTOMERS: Customer[] = [
         price: 20.00,
         quantity: 10,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -57,7 +57,7 @@ export const CUSTOMERS: Customer[] = [
         price: 20.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -81,7 +81,7 @@ export const CUSTOMERS: Customer[] = [
         price: 10.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -98,7 +98,7 @@ export const CUSTOMERS: Customer[] = [
         price: 50.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -122,7 +122,7 @@ export const CUSTOMERS: Customer[] = [
         price: 5.00,
         quantity: 2,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -146,7 +146,7 @@ export const CUSTOMERS: Customer[] = [
         price: 5.00,
         quantity: 2,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -170,7 +170,7 @@ export const CUSTOMERS: Customer[] = [
         price: 5.00,
         quantity: 2,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -187,7 +187,7 @@ export const CUSTOMERS: Customer[] = [
         price: 150.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -211,7 +211,7 @@ export const CUSTOMERS: Customer[] = [
         price: 20.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -228,7 +228,7 @@ export const CUSTOMERS: Customer[] = [
         price: 60.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -245,7 +245,7 @@ export const CUSTOMERS: Customer[] = [
         price: 120.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -269,7 +269,7 @@ export const CUSTOMERS: Customer[] = [
         price: 15.00,
         quantity: 1,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -308,7 +308,7 @@ export const CUSTOMERS: Customer[] = [
         price: 15.00,
         quantity: 3,
       },
-      vouchers: 0,
+      
     },
     total: 0,
   },
@@ -316,7 +316,7 @@ export const CUSTOMERS: Customer[] = [
   {
     id: 12,
     name: "Marlon Brando",
-    orderNumber: 1077,
+    orderNumber: 1078,
     dateAndTime: new Date("October 5, 2023 09:00:00"),
     items: {
       item1: {
@@ -348,7 +348,72 @@ export const CUSTOMERS: Customer[] = [
         price: 15.00,
         quantity: 3,
       },
-      vouchers: 0,
+      
+    },
+    total: 0,
+  },
+
+  {
+    id: 13,
+    name: "Marlon Brando",
+    orderNumber: 1079,
+    dateAndTime: new Date("October 5, 2023 09:00:00"),
+    pets: {
+      petName: "Fluffy",
+      petType: "Dal",
+      petBreed: "Persian Cat",
+      petOwner: "Alice",
+      price: 1000,
+      quantity: 1,
+
+    },
+    total: 0,
+  },
+  {
+    id: 14,
+    name: "Miriam Nguyen",
+    orderNumber: 1082,
+    dateAndTime: new Date("October 8, 2023 10:43:00"),
+    pets: {
+      petName: "Simba",
+      petType: "Small",
+      petBreed: "Lionhead Rabbit",
+      petOwner: "Jack",
+      price: 800,
+      quantity: 1,
+
+    },
+    total: 0,
+  },
+  {
+    id: 15,
+    name: "Helcurt Nipsola",
+    orderNumber: 1083,
+    dateAndTime: new Date("October 18, 2023 13:03:00"),
+    pets: {
+      petName: "Buddy",
+      petType: "Big",
+      petBreed: "Golden Retriever",
+      petOwner: "Bob",
+      price: 1000,
+      quantity: 1,
+
+    },
+    total: 0,
+  },
+  {
+    id: 16,
+    name: "Helcurt Nipsola",
+    orderNumber: 1085,
+    dateAndTime: new Date("October 27, 2023 08:48:00"),
+    pets: {
+      petName: "Rocky",
+      petType: "Big",
+      petBreed: "German Sheperd",
+      petOwner: "Harry",
+      price: 1000,
+      quantity: 1,
+
     },
     total: 0,
   },

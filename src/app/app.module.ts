@@ -7,7 +7,6 @@ import { LeftNavigationComponent } from './left-navigation/left-navigation.compo
 import { CustomersComponent } from './customers/customers.component';
 import { TotalSalesComponent } from './total-sales/total-sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
-import { AnalysisComponent } from './analysis/analysis.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -18,9 +17,8 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: CustomersComponent },
-  { path: 'total-sales', component: TotalSalesComponent },
+  { path: 'analysis', component: TotalSalesComponent },
   { path: 'inventory', component: InventoryComponent },
-  { path: 'analysis', component: AnalysisComponent },
 ];
 
 // configuration for the standalone component and other modules
@@ -29,8 +27,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LeftNavigationComponent,
-    TotalSalesComponent,
-    AnalysisComponent
+    TotalSalesComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@ import { InventoryFormComponent } from './inventory-form/inventory-form.componen
 })
 export class InventoryComponent {
   // display the past days record of inventory - static
-  // calculate all the total products to order for the upcoming week (batch order) - dynamic (pure computation)
+  // calculate all the total feed for animal products to order for the upcoming week (batch order) - dynamic (pure computation)
   // analyze the highest week of sales and conclude it as the most visited week of the month - dyanamic (pure computation)
 
 // 1.  Total sales per Day, Week and month. - check

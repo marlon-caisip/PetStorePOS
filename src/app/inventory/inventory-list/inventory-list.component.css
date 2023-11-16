@@ -20,6 +20,7 @@ table {
 
 td,
 th {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #424242;
+  border-bottom: 1px solid #424242;
+  color: #424242;
 }
