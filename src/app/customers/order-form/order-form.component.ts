@@ -58,6 +58,8 @@ export class OrderFormComponent {
     dialogRef;
   }
 
+  // this returns 0 value for pets // ERROR
+
   getQuantity(): number | null {
     if (this.newCustomer.items && this.newCustomer.items.item1) {
       return this.newCustomer.items.item1.quantity || null;
@@ -75,17 +77,26 @@ export class OrderFormComponent {
     }
   }
   
-  
 
   submitForm() {
-    // Generate a new order
-
     const selectedItemName = this.itemControl.value;
 
     const selectedItem = this.inventories.find(item => item.name === selectedItemName);
     
+        // Input validation
+    if (this.newCustomer.name === '') {
+      alert('Please enter a customer name');
+      return;
+    }
+  
+    // Check if the itemControl has a value
+    if (!this.itemControl.value) {
+      alert('Please select an item');
+      return;
+    }
+
     if (selectedItem) {
-      if (this.newCustomer.items) {
+      if (this.newCustomer.items && 'brand' in selectedItem) {
         // item configuration
         console.log('items');
         const item1 = this.newCustomer.items.item1;
@@ -95,7 +106,7 @@ export class OrderFormComponent {
         item1.color = selectedItem.color;
         item1.type = selectedItem.type;
         item1.weight = selectedItem.weight;
-      } else if (this.newCustomer.pets) {
+      } else if (this.newCustomer.pets && 'owner' in selectedItem) {
         // pet configuration
         console.log('pets');
         this.newCustomer.pets.petName = selectedItem.name;
@@ -104,11 +115,7 @@ export class OrderFormComponent {
         this.newCustomer.pets.petOwner = selectedItem.owner;
         this.newCustomer.pets.price = selectedItem.price;
 
-        console.log(this.newCustomer.pets.petName);
-        console.log(this.newCustomer.pets.petType);
-        console.log(this.newCustomer.pets.petBreed);
-        console.log(this.newCustomer.pets.petOwner);
-        console.log(this.newCustomer.pets.price);
+        console.log(this.newCustomer.pets.quantity);
         
       }
 
@@ -121,103 +128,22 @@ export class OrderFormComponent {
         this.newCustomer.id = newCustomerId;
         this.newCustomer.orderNumber = newOrderNumber;
   
-    
-    // Push the newCustomer to the customers array (assuming customers is an array)
-    this.customers.push(this.newCustomer);
-    this.cancelDialog();    
-  } else if (!selectedItem) {
-    console.error('Not found');
-    this.itemControl.setErrors({ notFound: true }); // Set error on itemControl
-    return; // Prevent further execution if the item is not found
-  }
-  
-  
-  
-  else {
-    // Handle case where the selected item is not found in inventories
-    console.error('Selected item not found in inventories');
+          // Set the current date and time      
+        // Push the newCustomer to the customers array (assuming customers is an array)
+        this.customers.push(this.newCustomer);
+        this.cancelDialog();    
+      } else if (!selectedItem) {
+        console.error('Not found');
+        this.itemControl.setErrors({ notFound: true }); // Set error on itemControl
+        return; // Prevent further execution if the item is not found
+      }
+      
+      else {
+        // Handle case where the selected item is not found in inventories
+        console.error('Selected item not found in inventories');
 
-    // show more error handling to show the error message
-    this.itemControl.setErrors({ notFound: true });
-
-
-  }
-
-    
-
-  
+        // show more error handling to show the error message
+        this.itemControl.setErrors({ notFound: true });
+      }
+    }
 }
-
-
-  
-}
-  
-
-  // submitForm() {
-
-
-  //   // item1: { name: '', brand: '', price: 0, quantity: 0 },
-
-  //   // refer to the this.inventories to fetch these values
-  //   console.log(this.newCustomer.items['item1']);
-
-  //   this.customers.push(this.newCustomer);
-
-  // //   // Input validation
-  // //   if (this.newCustomer.name === '') {
-  // //     alert('Please enter a customer name');
-  // //     return;
-  // //   }
-  
-  // //   // Check if the itemControl has a value
-  // //   if (!this.itemControl.value) {
-  // //     alert('Please select an item');
-  // //     return;
-  // //   }
-  // // // Log the values for debugging
-  // // console.log('this.newCustomer.items:', this.newCustomer.items);
-  // // console.log('quantity:', this.newCustomer.items['item1'].quantity);
-
-  // //   // Check if the quantity is valid
-  // //   const quantity = this.newCustomer.items?['item1']?.quantity;
-  // //   if (!quantity || quantity <= 0) {
-  // //     alert('Please enter a valid quantity');
-  // //     return;
-  // //   }
-  
-  // //   // Assuming the itemControl value is the selected inventory
-  // //   const selectedInventory: Inventory = this.itemControl.value;
-  
-  // //   // Assuming your history input fields are bound to newInventory
-  // //   if (
-  // //     !selectedInventory.history[0].quantity ||
-  // //     selectedInventory.history[0].quantity <= 0 ||
-  // //     selectedInventory.history[0].date === new Date('0000-00-00')
-  // //   ) {
-  // //     alert('Please enter a valid quantity and date for the selected item');
-  // //     return;
-  // //   }
-
-  
-  //   // Optionally, you can close the dialog or perform other actions
-  //   this.cancelDialog();
-  // }
-  
-
-  // // calculateTotal(inventory: Inventory | null) {
-  // //   let total = 0;
-  
-  // //   if (inventory && inventory.history) {
-  // //     for (let i = 0; i < inventory.history.length; i++) {
-  // //       // Assuming there's a default value for quantity if not yet submitted
-  // //       const quantity = inventory.history[i].quantity || 0;
-  // //       total += quantity * inventory.price;
-  // //     }
-  // //   }
-  
-  // //   return total;
-  // // }
-  
-  
-
-  
