@@ -8,6 +8,7 @@ This project is a Point of Sales System Project for Pet Products and Items. It i
 - Chart: https://canvasjs.com/angular-charts/
 - Displaying List: "https://angular.io/tutorial/tour-of-heroes/toh-pt2"
 - Dialog/Modal: https://material.angular.io/components/dialog/overview
+- Icons - https://boxicons.com/
 
 ## Project Dependencies
 
@@ -53,3 +54,7 @@ To run the development server and view the application in your browser, use the 
 ```bash
 ng serve
 ```
+
+## Why TypeScript over JavaScript?
+
+For the Pet Shop web-based point-of-sale system, TypeScript was chosen over pure HTML, CSS, and JavaScript for several reasons. Firstly, TypeScript is the language that Angular, the chosen framework for this project, is built upon. Secondly, Angular's component-based architecture offers a significant advantage over a traditional HTML, CSS, and JavaScript approach. As the project grows in size and complexity, it's already hard to manage code in Angular especially for beginners like me, how much more it is challenging in a pure HTML, CSS, and JavaScript environment. TypeScript shares a close resemblance to JavaScript in terms of syntax and functionality. This familiarity makes it easier for me to transition to TypeScript through its docs and few tutorials. Finally, I used TypeScript's interface feature which is very useful for creating a database-like structure for inventory and customers, without it my POS won't exist.
