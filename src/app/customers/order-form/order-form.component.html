@@ -1,4 +1,5 @@
-<!-- The user can just skip some fields since the thing to be added can be pet or an -->
+<!-- The user can just skip some fields since the thing to be added can be pet or animal -->
+<!-- User can only add one item per order -->
 
 <div class="container">
   <h2 mat-dialogue-title>Add Order</h2>
@@ -29,8 +30,6 @@
 
     <!-- content for drop down -->
 
-    <!-- create a button that will optionally create a select item and quantity when clicked -->
-
     <br />
 
     <span>Quantity: </span>
@@ -44,17 +43,6 @@
     />
 
     <br />
-
-    <!-- don't pre-calculate the total, just push the values in the inventories -->
-
-    <!-- <div>Value: {{ itemControl.value | json }}</div>
-    <div *ngIf="itemControl.value && itemControl.value.name">
-      Total: {{ calculateTotal(itemControl.value) }}
-    </div> -->
-
-    <!-- create the calculateTotal function -->
-
-    <!-- function to compute -->
 
     <button type="submit" (click)="submitForm()">Submit</button>
     <button (click)="cancelDialog()" id="cancel">Cancel</button>
