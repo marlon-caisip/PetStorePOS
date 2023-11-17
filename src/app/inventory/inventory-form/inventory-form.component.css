@@ -34,26 +34,28 @@ input[type="datetime-local"]:focus {
 #cancel {
   font-size: 14px;
   font-weight: 300;
-  color: #424242;
-  border: 1px solid #e0e0e0;
+  color: #6c4ba8;
+  border: 1px solid #6c4ba8;
   border-radius: 20px;
-  background-color: #f1f1f1;
+  background-color: #edebf3;
   padding: 8px 23px;
   cursor: pointer;
   font-family: Poppins;
+  margin-top: 10px;
 }
 
 button {
   font-size: 14px;
   font-weight: 600;
-  color: #e2e2e2;
+  color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 20px;
   background-color: #6c4ba8;
   padding: 8px 23px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 8px;
   font-family: Poppins;
+  margin-top: 10px;
 }
 
 span {
